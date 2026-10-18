@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 85% 88%;
+    --foreground: 0 0% 16%;
+    --card: 43 53% 81%;
+    --card-foreground: 0 0% 16%;
+    --popover: 43 53% 81%;
+    --popover-foreground: 0 0% 16%;
+    --primary: 0 0% 16%;
+    --primary-foreground: 48 85% 88%;
+    --secondary: 40 39% 73%;
+    --secondary-foreground: 0 0% 16%;
+    --muted: 40 39% 73%;
+    --muted-foreground: 26 9% 36%;
+    --accent: 40 39% 73%;
+    --accent-foreground: 0 0% 16%;
+    --destructive: 0 74% 46%;
+    --destructive-foreground: 48 85% 88%;
+    --border: 38 23% 66%;
+    --input: 38 23% 66%;
+    --ring: 22 12% 51%;
+    --brand: 19 97% 33%;
+    --term-ok: 59 79% 22%;
+    --term-dim: 26 9% 36%;
+    --surface: 51 74% 91%;
+    --radius: 0.375rem;
+  }
+
+  .dark {
+    --background: 0 0% 16%;
+    --foreground: 43 53% 81%;
+    --card: 14 5% 22%;
+    --card-foreground: 43 53% 81%;
+    --popover: 14 5% 22%;
+    --popover-foreground: 43 53% 81%;
+    --primary: 43 53% 81%;
+    --primary-foreground: 0 0% 16%;
+    --secondary: 19 5% 30%;
+    --secondary-foreground: 43 53% 81%;
+    --muted: 19 5% 30%;
+    --muted-foreground: 30 14% 63%;
+    --accent: 19 5% 30%;
+    --accent-foreground: 43 53% 81%;
+    --destructive: 0 74% 46%;
+    --destructive-foreground: 43 53% 81%;
+    --border: 26 6% 38%;
+    --input: 26 6% 38%;
+    --ring: 22 12% 51%;
+    --brand: 27 99% 55%;
+    --term-ok: 61 66% 44%;
+    --term-dim: 30 14% 63%;
+    --surface: 195 6% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+  ::selection {
+    background: hsl(var(--brand) / 0.3);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* thin custom scrollbar to match terminal aesthetic */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+  }
+}
