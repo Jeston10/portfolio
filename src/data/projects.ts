@@ -1,9 +1,9 @@
 // ─────────────────────────────────────────────────────────────────────────
-//  PROJECTS  ·  drafted from github.com/Jeston10 — edit / reorder freely
+//  PROJECTS  ·  drafted from github.com/Jeston10, edit / reorder freely
 // ─────────────────────────────────────────────────────────────────────────
 //  - `featured: true` shows a project in "Selected work" on the home page.
 //  - `category` drives the /projects filter tabs.
-//  - `terminal` is optional — a small code block beside the project.
+//  - `terminal` is optional: a small code block beside the project.
 
 export type ProjectLink = { label: string; href: string };
 
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     year: "2026",
     tagline: "AI mock-interview practice that actually changes how you perform.",
     description:
-      "Create an interview for a specific role, level, stack and company, take it in text or voice, and get per-question feedback with evidence pulled from your own transcript, plus model answers and a concrete next drill. Every attempt is kept, so progress stays visible — built to a world-class standard on a free-only infrastructure budget.",
+      "Create an interview for a specific role, level, stack and company, take it in text or voice, and get per-question feedback with evidence pulled from your own transcript, plus model answers and a concrete next drill. Every attempt is kept, so progress stays visible, built to a world-class standard on a free-only infrastructure budget.",
     highlights: [
       "Text or voice interviews with per-question, evidence-based feedback",
       "Role / level / stack / company-specific question generation",
@@ -48,7 +48,19 @@ export const projects: Project[] = [
       { label: "Code", href: "https://github.com/Jeston10/JustPrep" },
     ],
     featured: true,
-    image: "/projects/justprep.png",
+    terminal: {
+      title: "justprep / session",
+      lines: [
+        '$ justprep start --role "Backend SDE" --level mid',
+        "→ company: Stripe · stack: Node + Postgres",
+        "Q1  Design an idempotent payment webhook",
+        "  ● transcribing voice answer…",
+        "  feedback   structure 8/10 · depth 6/10",
+        '  evidence    "no retry window" @ 02:14',
+        "→ next drill: idempotency keys + dedup",
+        "# attempt #7 saved · progress tracked",
+      ],
+    },
   },
   {
     slug: "justtrade",
@@ -80,10 +92,12 @@ export const projects: Project[] = [
     terminal: {
       title: "justtrade / live quotes",
       lines: [
-        "$ watch AAPL  NVDA  TSLA",
+        "$ justtrade watch AAPL NVDA TSLA",
         "AAPL   228.50   ▲ +1.24%",
         "NVDA   138.07   ▲ +3.01%",
         "TSLA   251.44   ▼ -0.86%",
+        "$ justtrade alert NVDA > 140",
+        "✓ alert armed · Inngest job scheduled",
         "# AI summary: tech leads, energy lags",
       ],
     },
@@ -117,10 +131,14 @@ export const projects: Project[] = [
     terminal: {
       title: "finance-tracker / categorizer",
       lines: [
-        '$ add "Uber ride   420"',
-        "# routed to Groq → category: Transport",
-        "budget  Transport  3,000 / month   (14% used)",
-        "alert   Dining     limit reached → email sent",
+        '$ tracker add "Uber ride   420"',
+        "→ routed to Groq · category: Transport",
+        "budget   Transport   3,000/mo   14% used",
+        "budget   Dining      2,000/mo   limit hit",
+        "  alert → email sent to you",
+        "$ tracker forecast --month",
+        "projected spend 18,400 · savings 6,600",
+        "# live news: markets steady, INR flat",
       ],
     },
   },
@@ -150,6 +168,8 @@ export const projects: Project[] = [
         '{ "id": "usr_01", "url": "/api/mock/usr_01" }',
         "$ curl /api/mock/usr_01",
         '{ "name": "Ada", "role": "admin" }',
+        "$ ghost hub search weather",
+        "→ 6 public APIs · offline fallback ready",
         "# schema persisted in MongoDB",
       ],
     },
@@ -173,7 +193,18 @@ export const projects: Project[] = [
       { label: "Code", href: "https://github.com/Jeston10/JustBank" },
     ],
     featured: true,
-    image: "/projects/justbank.png",
+    terminal: {
+      title: "justbank / transfer",
+      lines: [
+        "$ justbank link --provider plaid",
+        "✓ linked   Chase ••4821   Wells ••7193",
+        "$ justbank transfer 250.00 ••4821 → ••7193",
+        "  processing via Dwolla…   status: settled",
+        "balance    Chase    4,120.55",
+        "balance    Wells    1,890.00",
+        "# spending  Dining 32% · Transport 18%",
+      ],
+    },
   },
   {
     slug: "justcare",
@@ -193,7 +224,18 @@ export const projects: Project[] = [
       { label: "Live demo", href: "https://jeston-s-healthcare-site.vercel.app" },
       { label: "Code", href: "https://github.com/Jeston10/JustCare" },
     ],
-    image: "/projects/justcare.png",
+    terminal: {
+      title: "justcare / admin",
+      lines: [
+        "$ justcare appointments --today",
+        "09:30   Patel, R.   scheduled   Dr. Rao",
+        "11:00   Khan, S.    pending     triage",
+        "14:15   Mehta, A.   cancelled   reslot",
+        "$ justcare stats",
+        "patients 1,284 · booked 23 · no-show 2",
+        "# realtime dashboard · status synced",
+      ],
+    },
   },
   {
     slug: "avenor",
@@ -220,7 +262,18 @@ export const projects: Project[] = [
       { label: "Live demo", href: "https://avenor-smoky.vercel.app" },
       { label: "Code", href: "https://github.com/Jeston10/AVENOR" },
     ],
-    image: "/projects/avenor.png",
+    terminal: {
+      title: "avenor / build",
+      lines: [
+        "$ pnpm build",
+        "vite v5  building for production…",
+        "✓ 142 modules transformed in 3.21s",
+        "  scroll-reveal · stagger · carousel",
+        "$ avenor leads --today",
+        "captured 18 · qualified 7 · demos 3",
+        "# Lighthouse  perf 98 · a11y 100",
+      ],
+    },
   },
   {
     slug: "ayurchakra",
@@ -244,7 +297,9 @@ export const projects: Project[] = [
         "farm      harvested   Nalgonda    ✓",
         "lab       tested      QA pass     ✓",
         "facility  packaged    Hyderabad   ✓",
+        "retail    shelved     Bengaluru   ✓",
         "on-chain  hash 0x9af3…e21  verified",
+        "# 3D supply map rendered · Three.js",
       ],
     },
   },
@@ -255,7 +310,7 @@ export const projects: Project[] = [
     year: "2025",
     tagline: "A tour and campus guide for VIT-AP University.",
     description:
-      "A web app for navigating and exploring the VIT-AP University campus — places, facilities and wayfinding brought together in one place for the university community.",
+      "A web app for navigating and exploring the VIT-AP University campus: places, facilities and wayfinding brought together in one place for the university community.",
     highlights: [
       "Campus wayfinding and facility directory",
       "Built for the VIT-AP community",
@@ -269,6 +324,8 @@ export const projects: Project[] = [
         "→ Central Library · Block 4 · 120m",
         "$ vcompass route AB1 → Hostel-C",
         "4 min walk · past the Food Court",
+        "$ vcompass nearby --food",
+        "Food Court · Juice Bar · Night Canteen",
         "# 38 campus locations mapped",
       ],
     },
@@ -280,7 +337,7 @@ export const projects: Project[] = [
     year: "2025",
     tagline: "A multi-function blockchain utility built during the specialisation.",
     description:
-      "Hands-on smart-contract and on-chain work as part of the Blockchain specialisation — a multi-functional blockchain entity. TODO: expand this with the specific functions it implements, or rename it.",
+      "Hands-on smart-contract and on-chain work as part of the Blockchain specialisation: a multi-functional blockchain entity. TODO: expand this with the specific functions it implements, or rename it.",
     highlights: ["Smart-contract and on-chain development practice"],
     tech: ["JavaScript", "Solidity", "Web3"],
     links: [{ label: "Code", href: "https://github.com/Jeston10/JestoGP9Te" }],
@@ -289,6 +346,8 @@ export const projects: Project[] = [
       lines: [
         "$ forge build",
         "Compiling Entity.sol … ok",
+        "$ forge test",
+        "✓ 12 passing · gas avg 48,210",
         '$ cast send Entity "mint(uint256)" 1',
         "tx 0x4c1a…9b   status 1 (success)",
         "# multi-function entity deployed",
