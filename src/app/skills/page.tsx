@@ -10,7 +10,8 @@ import { PageShell, PageHeading, ArrowLink } from "@/components/ui";
 import { SkillIcon } from "@/components/skill-icon";
 
 export const metadata: Metadata = {
-  title: `Skills & Credentials | ${profile.firstName} ${profile.lastName}`,
+  title: "Skills & Credentials",
+  description: `Technical skills, achievements, coding profiles and certifications of ${profile.firstName} ${profile.lastName}.`,
 };
 
 export default function SkillsPage() {

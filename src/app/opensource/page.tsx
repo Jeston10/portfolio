@@ -6,7 +6,8 @@ import { profile } from "@/data/profile";
 import { PageShell, PageHeading, ArrowLink } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: `Open Source | ${profile.firstName} ${profile.lastName}`,
+  title: "Open Source",
+  description: `Open-source contributions by ${profile.firstName} ${profile.lastName}, including bug-fix merge requests across GitLab projects.`,
 };
 
 const profiles = [

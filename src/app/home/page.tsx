@@ -10,7 +10,8 @@ import { OnRepeat } from "@/components/on-repeat";
 import { ArrowLink } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: `${profile.firstName} ${profile.lastName} | ${profile.title}`,
+  title: { absolute: `${profile.firstName} ${profile.lastName} | ${profile.title}` },
+  description: profile.about[0],
 };
 
 const featured = projects.filter((p) => p.featured).slice(0, 5);

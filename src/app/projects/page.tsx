@@ -4,7 +4,8 @@ import { PageShell, PageHeading } from "@/components/ui";
 import { ProjectsList } from "@/components/projects-list";
 
 export const metadata: Metadata = {
-  title: `Projects | ${profile.firstName} ${profile.lastName}`,
+  title: "Projects",
+  description: `Projects built by ${profile.firstName} ${profile.lastName}: AI tools, full-stack web apps, fintech and healthcare products, and blockchain experiments, most with a live deployment you can try.`,
 };
 
 export default function ProjectsPage() {

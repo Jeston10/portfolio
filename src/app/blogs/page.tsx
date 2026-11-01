@@ -4,7 +4,8 @@ import { profile } from "@/data/profile";
 import { PageShell, PageHeading } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: `Blogs | ${profile.firstName} ${profile.lastName}`,
+  title: "Blogs",
+  description: `Notes by ${profile.firstName} ${profile.lastName} on full-stack engineering, AI tooling, cloud and blockchain.`,
 };
 
 export default function BlogsPage() {

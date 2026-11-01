@@ -5,7 +5,8 @@ import { profile } from "@/data/profile";
 import { PageShell, PageHeading, TechChip, ArrowLink } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: `Experience | ${profile.firstName} ${profile.lastName}`,
+  title: "Experience",
+  description: `Work experience and roles of ${profile.firstName} ${profile.lastName} — ${profile.title}.`,
 };
 
 export default function ExperiencePage() {

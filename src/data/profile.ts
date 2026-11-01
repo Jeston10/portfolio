@@ -11,6 +11,9 @@ export const profile = {
   location: "India",
   email: "sjestonsingh@gmail.com",
 
+  // Canonical public URL of the deployed site (used for SEO, sitemap, schema).
+  siteUrl: "https://jeston-portfolio.vercel.app",
+
   // Your GitHub avatar, already downloaded to /public/avatar.png.
   // Swap in a different photo any time.
   avatar: "/avatar.png",
