@@ -9,10 +9,12 @@ import { cn } from "@/lib/utils";
 type Item = { label: string; hint: string; href: string };
 
 const navItems: Item[] = [
-  { label: "Home", hint: "page", href: "/" },
+  { label: "Home", hint: "page", href: "/home" },
   { label: "Experience", hint: "page", href: "/experience" },
   { label: "Projects", hint: "page", href: "/projects" },
   { label: "Skills", hint: "page", href: "/skills" },
+  { label: "Blogs", hint: "page", href: "/blogs" },
+  { label: "OpenSource", hint: "page", href: "/opensource" },
 ];
 
 const projectItems: Item[] = projects.map((p) => ({
@@ -78,7 +80,7 @@ export function CommandMenu() {
 
   return (
     <>
-      {/* Trigger — matches the search box in the header */}
+      {/* Trigger: matches the search box in the header */}
       <button
         type="button"
         onClick={() => setOpen(true)}

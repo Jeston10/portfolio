@@ -1,11 +1,18 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { ArrowUp } from "lucide-react";
 import { profile } from "@/data/profile";
 import { KeyboardShortcuts } from "@/components/keyboard-shortcuts";
+import { FooterName } from "@/components/footer-name";
 
 export function Footer() {
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+
+  // Hidden on the landing terminal.
+  if (pathname === "/") return null;
+
   return (
     <footer className="border-t border-border/60">
       <div className="container mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:px-6 lg:px-12">
@@ -27,6 +34,11 @@ export function Footer() {
             <ArrowUp className="h-4 w-4" />
           </button>
         </div>
+      </div>
+
+      {/* Oversized 3D name band — press it for a button click */}
+      <div className="flex justify-center overflow-hidden px-2 pb-4 pt-2 sm:pb-6">
+        <FooterName name="Jeston Singh" />
       </div>
     </footer>
   );

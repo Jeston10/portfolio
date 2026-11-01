@@ -12,13 +12,14 @@ const shortcuts: Shortcut[] = [
   { label: "Go to Experience", keys: ["Shift", "E"] },
   { label: "Go to Projects", keys: ["Shift", "P"] },
   { label: "Go to Skills", keys: ["Shift", "S"] },
+  { label: "Open Terminal", keys: ["Shift", "`"] },
   { label: "Toggle Theme", keys: ["Shift", "T"] },
   { label: "Open Shortcuts", keys: ["Ctrl", "/"] },
   { label: "Command Palette", keys: ["⌘", "K"] },
 ];
 
 const routeByLetter: Record<string, string> = {
-  H: "/",
+  H: "/home",
   E: "/experience",
   P: "/projects",
   S: "/skills",
@@ -62,7 +63,7 @@ export function KeyboardShortcuts() {
         return;
       }
 
-      // Plain Shift shortcuts — ignore while typing or when other modifiers held.
+      // Plain Shift shortcuts: ignore while typing or when other modifiers held.
       if (
         !e.shiftKey ||
         e.ctrlKey ||
@@ -70,6 +71,14 @@ export function KeyboardShortcuts() {
         e.altKey ||
         isTypingTarget(e.target)
       ) {
+        return;
+      }
+
+      // Shift + ` opens the terminal landing. The character is "~" when
+      // shifted, so accept the physical key (e.code) or either character.
+      if (e.code === "Backquote" || e.key === "`" || e.key === "~") {
+        e.preventDefault();
+        router.push("/");
         return;
       }
 

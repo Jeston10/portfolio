@@ -3,16 +3,18 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandMenu } from "@/components/command-menu";
 
 const nav = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/home" },
   { label: "Experience", href: "/experience" },
   { label: "Projects", href: "/projects" },
   { label: "Skills", href: "/skills" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "OpenSource", href: "/opensource" },
 ];
 
 function activeSegment(pathname: string) {
@@ -25,12 +27,15 @@ export function Header() {
   const segment = activeSegment(pathname);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  // The landing route is the full-screen terminal; no site chrome there.
+  if (pathname === "/") return null;
+
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-12">
         {/* Logo / breadcrumb */}
         <Link
-          href="/"
+          href="/home"
           className="flex items-center gap-2 text-sm font-bold text-foreground"
         >
           <span className="text-brand">~</span>
@@ -71,6 +76,14 @@ export function Header() {
           <div className="hidden sm:block">
             <CommandMenu />
           </div>
+          <Link
+            href="/"
+            aria-label="Open terminal"
+            title="Open terminal"
+            className="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            <Terminal className="h-[18px] w-[18px]" />
+          </Link>
           <ThemeToggle />
           <button
             type="button"

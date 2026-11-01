@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
+import { ScrollProgress } from "@/components/scroll-progress";
 import { Footer } from "@/components/footer";
 import { profile } from "@/data/profile";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col bg-background text-foreground">
             <Header />
+            <ScrollProgress />
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>
