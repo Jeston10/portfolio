@@ -32,20 +32,23 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-12">
-        {/* Logo / breadcrumb */}
-        <Link
-          href="/home"
-          className="flex items-center gap-2 text-sm font-bold text-foreground"
-        >
-          <span className="text-brand">~</span>
-          {segment && (
-            <>
-              <span className="text-muted-foreground">/</span>
-              <span>{segment}</span>
-            </>
-          )}
-        </Link>
+      <div className="container mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-12">
+        {/* Logo / breadcrumb — flex-1 so the centered nav stays put between
+            the two equal-width side sections regardless of its length. */}
+        <div className="flex flex-1 items-center">
+          <Link
+            href="/home"
+            className="flex items-center gap-2 text-sm font-bold text-foreground"
+          >
+            <span className="text-brand">~</span>
+            {segment && (
+              <>
+                <span className="text-muted-foreground">/</span>
+                <span>{segment}</span>
+              </>
+            )}
+          </Link>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 md:flex">
@@ -72,7 +75,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-1 items-center justify-end gap-2">
           <div className="hidden sm:block">
             <CommandMenu />
           </div>
