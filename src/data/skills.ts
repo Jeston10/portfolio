@@ -128,7 +128,7 @@ export type Certification = {
 export const certifications: Certification[] = [
   {
     tag: "education",
-    title: "B.Tech CSE (Blockchain) — VIT-AP University",
+    title: "B.Tech CSE (Blockchain), VIT-AP University",
     description:
       "Computer Science & Engineering with a Blockchain specialisation, August 2022 to September 2026.",
     action: "View",
@@ -136,7 +136,7 @@ export const certifications: Certification[] = [
   },
   {
     tag: "job simulation",
-    title: "Quantium — Data Analytics Job Simulation",
+    title: "Quantium: Data Analytics Job Simulation",
     description:
       "Forage virtual experience program in data analytics and business insight.",
     action: "View",
@@ -144,14 +144,14 @@ export const certifications: Certification[] = [
   },
   {
     tag: "job simulation",
-    title: "Electronic Arts — Software Engineering Job Simulation",
+    title: "Electronic Arts: Software Engineering Job Simulation",
     description: "Forage virtual experience program in software engineering.",
     action: "View",
     href: "https://www.theforage.com",
   },
   {
     tag: "job simulation",
-    title: "Tata Group — Data Visualisation Job Simulation",
+    title: "Tata Group: Data Visualisation Job Simulation",
     description:
       "Forage program: empowering business with effective data-visualisation insights.",
     action: "View",

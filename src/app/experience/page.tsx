@@ -45,7 +45,7 @@ export default function ExperiencePage() {
 function ExperienceRow({ item }: { item: ExperienceItem }) {
   return (
     <article className="grid grid-cols-1 gap-4 border-t border-border pt-8 sm:grid-cols-[14rem_1fr] sm:gap-8">
-      {/* Left — meta */}
+      {/* Left: meta */}
       <div className="space-y-2 text-sm text-muted-foreground">
         <p className="text-foreground">{item.period}</p>
         <p className="flex items-start gap-2">
@@ -54,7 +54,7 @@ function ExperienceRow({ item }: { item: ExperienceItem }) {
         </p>
       </div>
 
-      {/* Right — detail */}
+      {/* Right: detail */}
       <div>
         <h3 className="text-2xl font-bold tracking-tight text-foreground">
           {item.org}

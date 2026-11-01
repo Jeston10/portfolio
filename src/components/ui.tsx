@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SkillIcon } from "@/components/skill-icon";
 
-/** The outer section used by every page — matches the original spacing. */
+/** The outer section used by every page: matches the original spacing. */
 export function PageShell({
   children,
   className,

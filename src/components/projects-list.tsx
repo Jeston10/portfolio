@@ -67,7 +67,7 @@ export function ProjectsList() {
             </div>
 
             <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {/* Left — narrative */}
+              {/* Left: narrative */}
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                   {project.name}
@@ -108,7 +108,7 @@ export function ProjectsList() {
                 </div>
               </div>
 
-              {/* Right — screenshot (preferred) or terminal */}
+              {/* Right: screenshot (preferred) or terminal */}
               {project.image ? (
                 <div className="lg:pt-2">
                   <div className="overflow-hidden rounded-lg border border-border bg-surface">

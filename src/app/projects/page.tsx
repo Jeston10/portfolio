@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     <PageShell>
       <PageHeading
         title="Projects"
-        lead="Things I have built, most of them from the ground up: AI tools, full-stack web apps, fintech and healthcare products, and a few blockchain experiments — most with a live deployment you can try."
+        lead="Things I have built, most of them from the ground up: AI tools, full-stack web apps, fintech and healthcare products, and a few blockchain experiments, most with a live deployment you can try."
       />
       <ProjectsList />
     </PageShell>

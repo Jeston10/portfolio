@@ -16,19 +16,19 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    period: "September 2026 – Present",
+    period: "September 2026 -Present",
     location: "India (Remote)",
     org: "GitLab",
     role: "Open Source Developer · Contributor Developer (Level 4)",
     points: [
       "Progressed from Contributor Developer Level 1 to Level 4 through sustained open-source contributions.",
-      "Raise bug-fix merge requests across GitLab projects — the Rails monolith, the glab CLI, the Language Server and sibling repositories.",
+      "Raise bug-fix merge requests across GitLab projects: the Rails monolith, the glab CLI, the Language Server and sibling repositories.",
     ],
     tech: ["Ruby", "Go", "TypeScript", "Git"],
     links: [{ label: "GitLab profile", href: "https://gitlab.com/sjestonsingh" }],
   },
   {
-    period: "March 2026 – Present",
+    period: "March 2026 -Present",
     location: "Bangalore, Karnataka, India",
     org: "Updot",
     role: "SDE 1",
@@ -39,7 +39,7 @@ export const experience: ExperienceItem[] = [
     links: [],
   },
   {
-    period: "December 2025 – Present",
+    period: "December 2025 -Present",
     location: "India",
     org: "WellVantage",
     role: "Full Stack Developer",
@@ -53,31 +53,31 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    period: "February 2026 – September 2026",
+    period: "February 2026 -September 2026",
     location: "India",
     org: "Avenor",
     role: "Founder",
     points: [
-      "Founded Avenor — a studio that turns business models into conversion-focused visual web experiences.",
+      "Founded Avenor, a studio that turns business models into conversion-focused visual web experiences.",
       "Designed and built the marketing site with React 19, Vite, Tailwind CSS and Framer Motion.",
     ],
     tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     links: [{ label: "Live site", href: "https://avenor-smoky.vercel.app" }],
   },
   {
-    period: "September 2025 – September 2026",
+    period: "September 2025 -September 2026",
     location: "India",
     org: "StakeandExposed",
     role: "Founder",
     points: [
-      "Building what blockchain can do where nothing else can — on-chain products and smart-contract tooling.",
+      "Building what blockchain can do where nothing else can: on-chain products and smart-contract tooling.",
     ],
     tech: ["Solidity", "Web3", "Blockchain"],
     links: [],
   },
   {
     section: "Internships & roles",
-    period: "January 2026 – March 2026",
+    period: "January 2026 -March 2026",
     location: "India (Remote)",
     org: "BrightCHAMPS",
     role: "Coding Educator",
@@ -87,7 +87,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Internships & roles",
-    period: "August 2025 – October 2025",
+    period: "August 2025 -October 2025",
     location: "India (Remote)",
     org: "Infosys Springboard",
     role: "AI/ML Team Lead",
@@ -99,7 +99,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Internships & roles",
-    period: "September 2025 – October 2025",
+    period: "September 2025 -October 2025",
     location: "India",
     org: "Future Interns",
     role: "Blockchain & Crypto Intern",
@@ -116,7 +116,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Internships & roles",
-    period: "September 2025 – October 2025",
+    period: "September 2025 -October 2025",
     location: "India (Remote)",
     org: "Evoastra Ventures",
     role: "Analytics Manager · Data Analytics",
@@ -128,7 +128,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Internships & roles",
-    period: "June 2024 – September 2024",
+    period: "June 2024 -September 2024",
     location: "India",
     org: "RineX.Ai",
     role: "Cybersecurity & Ethical Hacking Intern",
@@ -140,7 +140,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Internships & roles",
-    period: "July 2023 – September 2023",
+    period: "July 2023 -September 2023",
     location: "India",
     org: "HackingFlix",
     role: "Cyber Security Analyst",
@@ -152,7 +152,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     section: "Education",
-    period: "August 2022 – September 2026",
+    period: "August 2022 -September 2026",
     location: "Amaravati, Andhra Pradesh, India",
     org: "VIT-AP University",
     role: "B.Tech, Computer Science & Engineering (Blockchain)",
