@@ -55,8 +55,8 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="mt-6 w-fit space-y-3">
-              <div className="flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 sm:w-fit sm:flex-col sm:gap-0 sm:space-y-3">
+              <div className="contents sm:flex sm:flex-wrap sm:gap-3">
                 <SocialButton
                   href={profile.socials.github}
                   icon={<Github className="h-4 w-4" />}
@@ -73,7 +73,7 @@ export default function HomePage() {
                   label="GitLab"
                 />
               </div>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="contents sm:flex sm:flex-wrap sm:justify-center sm:gap-3">
                 <SocialButton
                   href={profile.socials.leetcode}
                   icon={<SiLeetcode className="h-4 w-4" />}
