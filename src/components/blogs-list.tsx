@@ -18,8 +18,8 @@ export function BlogsList() {
 
   return (
     <div>
-      {/* 3 columns on every screen (5 rows = 15 per page) */}
-      <div className="grid grid-cols-3 gap-5">
+      {/* 1 column on mobile, 3 columns from sm up (5 rows = 15 per page) */}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
         {visible.map((blog) => (
           <BlogCard key={blog.slug} blog={blog} onOpen={() => setActive(blog)} />
         ))}
