@@ -18,8 +18,8 @@ export function BlogsList() {
 
   return (
     <div>
-      {/* 3 x 5 grid of post cards */}
-      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+      {/* 3 columns on every screen (5 rows = 15 per page) */}
+      <div className="grid grid-cols-3 gap-5">
         {visible.map((blog) => (
           <BlogCard key={blog.slug} blog={blog} onOpen={() => setActive(blog)} />
         ))}
@@ -79,7 +79,7 @@ function BlogCard({ blog, onOpen }: { blog: Blog; onOpen: () => void }) {
           src={blog.image}
           alt={blog.title}
           fill
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+          sizes="33vw"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
