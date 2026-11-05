@@ -24,9 +24,12 @@ export function PageShell({
 export function PageHeading({
   title,
   lead,
+  leadClassName,
 }: {
   title: string;
   lead?: React.ReactNode;
+  /** Override the lead width (defaults to max-w-xl). */
+  leadClassName?: string;
 }) {
   return (
     <header className="mb-10 space-y-3 sm:mb-14">
@@ -34,7 +37,9 @@ export function PageHeading({
         {title}
       </h1>
       {lead && (
-        <p className="max-w-xl text-muted-foreground">{lead}</p>
+        <p className={cn("max-w-xl text-muted-foreground", leadClassName)}>
+          {lead}
+        </p>
       )}
     </header>
   );

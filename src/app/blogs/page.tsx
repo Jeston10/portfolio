@@ -13,7 +13,8 @@ export default function BlogsPage() {
     <PageShell>
       <PageHeading
         title="Blogs"
-        lead="What I like to dig into and write about: the real technicalities of how large systems actually work, traced down to the line of code that proves it."
+        leadClassName="max-w-3xl"
+        lead="Writing about the real technicalities of how large systems actually work."
       />
 
       <BlogsList />
