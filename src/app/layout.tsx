@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Footer } from "@/components/footer";
-import { AnimatedFavicon } from "@/components/animated-favicon";
 import { profile } from "@/data/profile";
 
 const mono = JetBrains_Mono({
@@ -90,7 +89,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <AnimatedFavicon />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
