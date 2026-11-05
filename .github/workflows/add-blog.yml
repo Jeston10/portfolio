@@ -1,0 +1,43 @@
+name: Add LinkedIn blog
+
+# Trigger from the Actions tab (works on the GitHub mobile app too):
+# paste the LinkedIn post URL, click "Run workflow". The post's title,
+# image and date are fetched automatically, committed, and the site
+# redeploys. No credentials are stored.
+on:
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: "LinkedIn post URL (or activity id)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  add-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Add the post
+        run: node scripts/add-blog.mjs "${{ inputs.post_url }}"
+
+      - name: Commit and push if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes (post may already be added)."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat(blogs): add LinkedIn post via workflow"
+          git push

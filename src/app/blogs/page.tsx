@@ -13,7 +13,7 @@ export default function BlogsPage() {
     <PageShell>
       <PageHeading
         title="Blogs"
-        lead="What I write about shipping real fixes in the open. Each card opens the full post, mirrored live from LinkedIn."
+        lead="What I like to dig into and write about: the real technicalities of how large systems actually work, traced down to the line of code that proves it."
       />
 
       <BlogsList />
