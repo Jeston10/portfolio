@@ -66,10 +66,14 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: fullName,
+  // The single-word name people actually search for.
+  alternateName: [profile.firstName, `${profile.firstName} Portfolio`],
   givenName: profile.firstName,
   familyName: profile.lastName,
   jobTitle: profile.title,
+  description: profile.about[0],
   url: profile.siteUrl,
+  mainEntityOfPage: profile.siteUrl,
   image: `${profile.siteUrl}${profile.avatar}`,
   email: `mailto:${profile.email}`,
   address: {
